@@ -7,12 +7,16 @@
   
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="Node.js 第3天课程笔记知识点 guestbook 封装 回调函数 Node.js 中的异步代码封装   在 Node 中操作 MySQL 数据库 ES6 常用语法   反馈 感觉这两天就看老师自己在敲了，我自己一遍都没过呢，导致什么都不会写，现在开始听视频一步步操作中 有点懵，正在猛撸视频 老师手速好快，脑子的反应跟不上老师的手速，稍微慢点 。。。 觉得这个命令太陌生了，刚开始带我们练习一">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2018/01/24/README/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Node.js 第3天课程笔记知识点 guestbook 封装 回调函数 Node.js 中的异步代码封装   在 Node 中操作 MySQL 数据库 ES6 常用语法   反馈 感觉这两天就看老师自己在敲了，我自己一遍都没过呢，导致什么都不会写，现在开始听视频一步步操作中 有点懵，正在猛撸视频 老师手速好快，脑子的反应跟不上老师的手速，稍微慢点 。。。 觉得这个命令太陌生了，刚开始带我们练习一">
+<meta property="og:updated_time" content="2018-01-17T10:01:16.263Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="Node.js 第3天课程笔记知识点 guestbook 封装 回调函数 Node.js 中的异步代码封装   在 Node 中操作 MySQL 数据库 ES6 常用语法   反馈 感觉这两天就看老师自己在敲了，我自己一遍都没过呢，导致什么都不会写，现在开始听视频一步步操作中 有点懵，正在猛撸视频 老师手速好快，脑子的反应跟不上老师的手速，稍微慢点 。。。 觉得这个命令太陌生了，刚开始带我们练习一">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -59,9 +63,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-README" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-README" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/01/24/README/" class="article-date">
   <time datetime="2018-01-24T05:24:27.610Z" itemprop="datePublished">2018-01-24</time>
@@ -153,93 +155,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-my_test" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/01/24/my_test/" class="article-date">
-  <time datetime="2018-01-24T05:09:05.081Z" itemprop="datePublished">2018-01-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="反馈"><a href="#反馈" class="headerlink" title="反馈"></a>反馈</h2><ul>
-<li>手速语速稍微慢点 - 。 -</li>
-<li>讲课速度有点快，能够慢点的话会更好</li>
-<li>模块和包有点模糊 老师能在讲一下吗</li>
-</ul>
-<hr>
-<h2 id="上午总结"><a href="#上午总结" class="headerlink" title="上午总结"></a>上午总结</h2><hr>
-<h2 id="下午总结"><a href="#下午总结" class="headerlink" title="下午总结"></a>下午总结</h2><hr>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><hr>
-<h2 id="反馈目标"><a href="#反馈目标" class="headerlink" title="反馈目标"></a>反馈目标</h2><p>// 代码风格规范<br>//    JavaScript Standard Style<br>//    Aribin JavaScript Style<br>//    《编写可维护的 JavaScript》<br>//    如何写代码写的精简，优雅<br>// 一些工具可以用来强制校验代码规范，如果代码不符合规范约定，直接就报错不允许执行<br>// var foo = ‘nar’</p>
-<h2 id="nodemon"><a href="#nodemon" class="headerlink" title="nodemon"></a>nodemon</h2><p>// npm install –global nodemon<br>// –global 选项是用于将包安装到全局<br>// 凡是安装全局包，在任意位置执行都可以<br>// 在 Node 中，有一种特殊的包，这种包不是用于让你在代码中 require 来使用的<br>// 而是一个独立的命令行工具软件<br>// 例如：git、npm、<br>// 安装完 nodemon 之后就会在命令行中多出一个命令：nodemon<br>// nodemon 使用：<br>//  node app.js<br>//  nodemon app.js<br>// nodemon 在外部包了一个壳子<br>// 它会监视文件的变动，当文件发生改变，它会帮你去自动去重新 node app.js<br>// 其实命令行工具也可以安装到项目中来使用</p>
+  
+    <a href="/2018/01/24/my_test/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/24/my_test/" data-id="cjcsm19j40000estbaf0sakns" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/01/24/hello-world/" class="article-date">
-  <time datetime="2018-01-24T04:53:10.196Z" itemprop="datePublished">2018-01-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/24/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/24/hello-world/" data-id="cjcslmr3900001stbwvwao9us" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 
 </section>
         
