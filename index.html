@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Buscar"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -83,124 +83,33 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="博客发表文章步骤"><a href="#博客发表文章步骤" class="headerlink" title="博客发表文章步骤"></a>博客发表文章步骤</h2><ul>
-<li>这是我的博客安装在本地的目录<br><img src="/2018/03/10/pushArticleToHexo/博客本地目录.png" alt="目录结构"></li>
-</ul>
-<ol>
-<li><p>在博客的安装目录下找到 <code>source\_posts</code> 文件夹，打开 <code>GitBash</code> 输入</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">'文章名'</span></span><br></pre></td></tr></table></figure>
+        <h2 id="博客发表文章步骤"><a href="#博客发表文章步骤" class="headerlink" title="博客发表文章步骤"></a>博客发表文章步骤</h2><h3 id="这是我的博客安装在本地的目录"><a href="#这是我的博客安装在本地的目录" class="headerlink" title="这是我的博客安装在本地的目录"></a>这是我的博客安装在本地的目录</h3><p>  <img src="/2018/03/10/pushArticleToHexo/博客本地目录.png" alt="目录结构"></p>
+<h3 id="1-在博客的安装目录下找到-source-posts-文件夹，打开-GitBash-输入"><a href="#1-在博客的安装目录下找到-source-posts-文件夹，打开-GitBash-输入" class="headerlink" title="1. 在博客的安装目录下找到 source\_posts 文件夹，打开 GitBash 输入"></a>1. 在博客的安装目录下找到 <code>source\_posts</code> 文件夹，打开 <code>GitBash</code> 输入</h3>   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">'文章名'</span></span><br></pre></td></tr></table></figure>
 <ul>
-<li>会自动创建出 <code>md</code> 文档</li>
-</ul>
+<li><p>会自动创建出 <code>md</code> 文档</p>
+<h3 id="2-仍然在-source-posts-目录下，GitBash-中输入"><a href="#2-仍然在-source-posts-目录下，GitBash-中输入" class="headerlink" title="2. 仍然在 source\_posts 目录下，GitBash 中输入"></a>2. 仍然在 <code>source\_posts</code> 目录下，<code>GitBash</code> 中输入</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy --generate</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>仍然在 <code>source\_posts</code> 目录下，<code>GitBash</code> 中输入 </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy --generate</span><br></pre></td></tr></table></figure>
-<ul>
-<li>该操作在 <code>public</code> 文件夹下会生成对应的 <code>HTML</code> 文件 </li>
-<li>此时 <code>GitHub</code> 上已经有最新的文章，但是博客上还没显示</li>
-</ul>
+<li><p>该操作在 <code>public</code> 文件夹下会生成对应的 <code>HTML</code> 文件 </p>
 </li>
-<li><p>输入</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-<ul>
-<li>重启服务器后，在博客中就可以看到发布的最新文章了</li>
-</ul>
+<li><p>此时 <code>GitHub</code> 上已经有最新的文章，但是博客上还没显示</p>
+<h3 id="3-输入"><a href="#3-输入" class="headerlink" title="3. 输入"></a>3. 输入</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>若要发表带有图片的文章，</p>
-<ul>
-<li>首先要在 <code>_config.yml</code> 文件中设置 <code>post_asset_folder:true</code>,</li>
-<li>把要发表的图片放在文章所在目录中的与文章同名的文件夹中，或者引用网络图片资源</li>
-</ul>
+<li><p>重启服务器后，在博客中就可以看到发布的最新文章了</p>
+<h3 id="4-若要发表带有图片的文章"><a href="#4-若要发表带有图片的文章" class="headerlink" title="4. 若要发表带有图片的文章"></a>4. 若要发表带有图片的文章</h3></li>
+<li><p>首先要在 <code>_config.yml</code> 文件中设置 <code>post_asset_folder:true</code></p>
+</li>
+<li><p>把要发表的图片放在文章所在目录中的与文章同名的文件夹中，或者引用网络图片资源</p>
 <p><img src="/2018/03/10/pushArticleToHexo/配置图片文章.png" alt="相关配置"></p>
-</li>
-<li><p>在 md 文件中插入图片的格式：</p>
-<ul>
+<h3 id="5-在-md-文件中插入图片的格式："><a href="#5-在-md-文件中插入图片的格式：" class="headerlink" title="5. 在 md 文件中插入图片的格式："></a>5. 在 md 文件中插入图片的格式：</h3></li>
 <li><code>![图片描述](图片地址)</code>  正确</li>
 <li><code></code>  不正确</li>
 <li><a href="https://www.jianshu.com/p/cf0628478a4e" target="_blank" rel="noopener">可以点击链接查看详细解释</a></li>
 </ul>
-</li>
-</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/10/pushArticleToHexo/" data-id="cjeku52mm0002gctblgm0blfh" class="article-share-link">Compartir</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-“ttry-again" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/01/24/“ttry-again/" class="article-date">
-  <time datetime="2018-01-24T07:45:16.000Z" itemprop="datePublished">2018-01-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/24/“ttry-again/">“ttry-again</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-<p>1、用命令生成md 文件：hexo new  “名字”<br>7、购买域名   +  域名解析</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/24/“ttry-again/" data-id="cjeku52mc0001gctbzafxzt1e" class="article-share-link">Compartir</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-newTest" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/01/24/newTest/" class="article-date">
-  <time datetime="2018-01-24T06:54:56.000Z" itemprop="datePublished">2018-01-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/24/newTest/">newTest</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="/2018/01/24/newTest/1.jpg" alt="图片描述"><br>1、用命令生成md 文件：hexo new  “名字”<br>7、购买域名   +  域名解析</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/24/newTest/" data-id="cjeku52m20000gctbdcruwgqq" class="article-share-link">Compartir</a>
+      <a data-url="http://yoursite.com/2018/03/10/pushArticleToHexo/" data-id="cjekv7vh90001l0tb0on45kmd" class="article-share-link">Share</a>
       
       
     </footer>
@@ -296,52 +205,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/24/README/" data-id="cjeku52mm0003gctbb7ryoyz1" class="article-share-link">Compartir</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/01/24/hello-world/" class="article-date">
-  <time datetime="2018-01-24T04:53:10.196Z" itemprop="datePublished">2018-01-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/24/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/24/hello-world/" data-id="cjeku52ng0004gctbewj4mzs7" class="article-share-link">Compartir</a>
+      <a data-url="http://yoursite.com/2018/01/24/README/" data-id="cjekv7vgp0000l0tbgjoog8uh" class="article-share-link">Share</a>
       
       
     </footer>
@@ -367,7 +231,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archivos</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li></ul>
     </div>
@@ -377,7 +241,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Posts recientes</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
@@ -386,19 +250,7 @@
           </li>
         
           <li>
-            <a href="/2018/01/24/“ttry-again/">“ttry-again</a>
-          </li>
-        
-          <li>
-            <a href="/2018/01/24/newTest/">newTest</a>
-          </li>
-        
-          <li>
             <a href="/2018/01/24/README/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2018/01/24/hello-world/">Hello World</a>
           </li>
         
       </ul>
@@ -414,7 +266,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2018 John Doe<br>
-      Construido por <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
