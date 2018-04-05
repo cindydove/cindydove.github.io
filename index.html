@@ -54,7 +54,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -64,6 +64,89 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-vue-watch" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/05/vue-watch/" class="article-date">
+  <time datetime="2018-04-05T08:58:25.000Z" itemprop="datePublished">2018-04-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/05/vue-watch/">vue中watch的用法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>vue中的 watch</p>
+<p>watch的基本用法</p>
+<ul>
+<li>watch属性的作用：监视数据 的变化，从而做一件事情；VUE实例身上有watch属性；<ul>
+<li>定义：一个对象，键是需要观察的表达式，值是对应回调函数。</li>
+<li>什么时候使用deep深度监视呢：1. 监视的数据是一个对象； 2. 而且这个对象并没有被重新赋值，只是修改了对象的属性</li>
+<li>使用 watch 还可以监视表达式，如果监视的是表达式，则前面的 表达式，必须使用引号包裹起来；</li>
+<li>ajax获取的数据会有延迟性(异步请求的原因)，造成数据还没获取到位但是页面已经加载完毕，此时要在页面中进行展示的数据为undefined,可以用watch监视Ajax获取的数据的变化进行重新渲染页面</li>
+<li>watch 中回调函数不能用箭头函数，只能用普通的函数形式<pre><code>var vm = new Vue({
+          el: &apos;#app&apos;,
+          data: {
+              a: 1,
+              user: {
+                  name: &apos;zs&apos;,
+                  age: 18
+              },
+          },
+          methods: {},
+          router,
+          watch: {
+            // a也可以用引号包裹
+              a: function (newValue，oldValue) { 
+              },
+              &apos;user.name&apos;: function (newValue，oldValue) {              
+              },
+              user: {
+                handler: function (newval) { // 如果监视到了 user 的变化，则，调用 handler 处理函数
+                console.log(newval)
+                },
+                deep: true, // deep 表示深度监视   【用的不多】
+                immediate: true //实现页面刚进入的时候，强制调用一下`watch`
+              }
+              // watch 除了可以监视 单个变量名之外；还可以监视 表达式，表达式必须用引号包裹
+              &apos;$route.path&apos;: function (newVal, oldVal) {                           
+              }
+          }
+      });
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<p>父组件将异步操作返回的值传递给子组件并使用 watch 监听</p>
+<ol>
+<li>父组件将异步操作中返回的值传递给子组件，而子组件使用该值时会发现值为 undefined</li>
+<li>原因：由于该值为异步操作获取的，所以在组件进行渲染时该值可能并没有被返回，此时传入的值就是  undefined </li>
+<li>解决办法：利用 watch 对数据进场监听,当数据发生变化时，再进行操作</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/05/vue-watch/" data-id="cjfmbi8ql00002wtb8zayh6mx" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-promise" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -131,7 +214,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/25/promise/" data-id="cjfmbbukq0002rwtb8f56dr3e" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/03/25/promise/" data-id="cjfmbev0x0002ootbpu4q2ilj" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -209,7 +292,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/22/modifyCSSinWEBFrame/" data-id="cjfmbbuk60001rwtb7oeldks1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/03/22/modifyCSSinWEBFrame/" data-id="cjfmbev0b0000ootb5y8c85sy" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -267,7 +350,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/10/pushArticleToHexo/" data-id="cjfmbbul00003rwtb7gxl6pe1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/01/10/pushArticleToHexo/" data-id="cjfmbev130003ootbjk11q8q5" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -293,9 +376,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archiv</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li></ul>
     </div>
   </div>
 
@@ -303,9 +386,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">letzter Beitrag</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/04/05/vue-watch/">vue中watch的用法</a>
+          </li>
         
           <li>
             <a href="/2018/03/25/promise/">promise详解</a>
